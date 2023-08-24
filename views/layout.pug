@@ -2,6 +2,28 @@ doctype html
 html
   head
     title= title
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Khand&display=swap" rel="stylesheet")
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    .flexh(style="border-bottom: 1px solid; height: 7vh;")
+      .left(class="flexh")
+        img(src="/images/Ucsc.webp", style="padding: 5px;")
+        p(style="margin: auto; width: 100%; text-align:left;") Freshwater Conservation Ranking
+      .right(class="flexv")
+        if home
+          a(class="button button-invert" href="/") home
+        else
+          a(class="button" href="/") home
+        if about
+          a(class="invert" href="/about") about
+        else
+          a(class="button", href="/about") about
+        if interactive
+          a(class="button button-invert" href="/interactive-showcase") interactive-showcase
+        else
+          a(class="button" href="/interactive-showcase") interactive-showcase
+        if data
+          a(class="button button-invert" href="/interactive-showcase") interactive-showcase
     block content
